@@ -20,6 +20,8 @@ public class LiveChatPlugin extends Plugin {
     public void start() {
         try {
             configuration = new LiveChatConfiguration();
+
+            configuration.load();
         } catch (InvalidFileExtensionException | IOException e) {
             throw new RuntimeException(e);
         }
